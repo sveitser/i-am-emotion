@@ -1,0 +1,12 @@
+**FLOW**
+- Chair is in idle mode
+- During idle mode each chair has its unique solid colour 
+- The proximity sensor is checking if there is a head, if no head is detected it should return around ~53
+- If a head is detected the voice plays the following prerecorded message: "Welcome... Relax and look at the camera"
+- The colour of the light fades to white to increase the quality of the captured image and stays white for 4 sec during the capture and processing of the image.
+- The picture after it has been analysed on the server, it seeds the text generation
+- The colour turns back to the signature chair colour and goes into 'breathing mode'
+- The voice announces "Photo acquired, please enjoy..." 
+- 2 sec pause and then it starts playing back the generated content
+- Text is generated vocalised and played back through the chair speakers
+- When the user leaves the chair the sound stops and the light becomes solid again

@@ -1,0 +1,15 @@
+[Unit]
+Description=Chair
+After=network.target
+
+[Service]
+ExecStart=/home/pi/start
+WorkingDirectory=/home/pi/chair/client
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+RestartSec=2
+User=pi
+
+[Install]
+WantedBy=multi-user.target

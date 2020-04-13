@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+export CHAIR_COLOR="1 0 0.1"
+
+cd /home/pi/chair/client
+/home/pi/berryconda3/envs/py36/bin/python client.py -h 192.168.1.10

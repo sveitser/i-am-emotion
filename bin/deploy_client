@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euxo pipefail
+
+function deploy(){
+    rsync -avP client/*.* $1:chair/client/
+    rsync -avP client/start_$1 $1:start
+    rsync -avP client/chair.service $1:
+    ssh $1 sudo cp chair.service /etc/systemd/system
+    ssh $1 sudo systemctl daemon-reload
+    ssh $1 sudo systemctl restart chair
+    ssh $1 sudo systemctl status chair
+}
+
+deploy $1

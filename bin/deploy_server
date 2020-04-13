@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euxo pipefail
+
+HOST=${1:-ai}
+
+rsync -avP ./ ai@$HOST:chair/
+ssh ai@$HOST systemctl --user restart chair

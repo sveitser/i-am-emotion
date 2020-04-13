@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euxo pipefail
+
+deploy_client pi0
+deploy_client pi1
+deploy_client pi2

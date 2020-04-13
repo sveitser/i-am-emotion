@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -e
+
+sudo apt-get install -y libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0 \
+    tmux vim htop
+
+wget https://github.com/jjhelmus/berryconda/releases/download/v2.0.0/Berryconda3-2.0.0-Linux-armv7l.sh
+bash Berryconda3-2.0.0-Linux-armv7l.sh -b
+
+~/berryconda3/bin/conda create -y -n py36 python=3.6
+
+echo 'export PATH=$HOME/berryconda3/bin:$PATH' >> ~/.bashrc
+
+~/berryconda3/envs/py36/bin/python -m pip install -r client/requirements.txt
+~/berryconda3/envs/py36/bin/python -m pip install picamera==1.13 RPi.GPIO==0.6.5
+
+echo DONE!
