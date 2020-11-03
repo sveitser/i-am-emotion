@@ -8,6 +8,11 @@ The code for the **'I am {emotion}'** art installation, by Manolis Perrakis
 installation can be found on our websites [artand.tech](https://artand.tech) and
 [cogn.ai](https://cogn.ai).
 
+### Collaborators
+
+- Data preparation and GPT2 model training: Xiaodong Tan ([@sudongtan](https://github.com/sudongtan))
+- Textile work: Cristina Kountiou.
+
 ![](images/under_the_light.gif)   
 
 ## Warning
@@ -153,8 +158,6 @@ Note that if the service is running the camera cannot be used by another program
 
 ### Credits
 
-- Data preparation and GPT2 model training: Xiaodong Tan ([@sudongtan](https://github.com/sudongtan))
-- Textile work: Cristina Kountiou.
 - GPT2: https://github.com/openai/gpt-2
   + Training: https://github.com/nshepperd/gpt-2/tree/finetuning
 - Tacotron2: https://github.com/NVIDIA/tacotron2
